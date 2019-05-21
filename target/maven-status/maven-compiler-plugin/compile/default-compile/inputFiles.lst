@@ -1,0 +1,13 @@
+/projects/usuarios/src/main/java/io/swagger/api/factories/UserApiServiceFactory.java
+/projects/usuarios/src/gen/java/io/swagger/api/UserApiService.java
+/projects/usuarios/src/gen/java/io/swagger/api/ApiException.java
+/projects/usuarios/src/gen/java/io/swagger/api/RFC3339DateFormat.java
+/projects/usuarios/src/gen/java/io/swagger/api/StringUtil.java
+/projects/usuarios/src/gen/java/io/swagger/model/Usuario.java
+/projects/usuarios/src/gen/java/io/swagger/api/ApiOriginFilter.java
+/projects/usuarios/src/gen/java/io/swagger/api/NotFoundException.java
+/projects/usuarios/src/gen/java/io/swagger/api/ApiResponseMessage.java
+/projects/usuarios/src/gen/java/io/swagger/api/UserApi.java
+/projects/usuarios/src/gen/java/io/swagger/api/JacksonJsonProvider.java
+/projects/usuarios/src/main/java/io/swagger/api/impl/UserApiServiceImpl.java
+/projects/usuarios/src/main/java/io/swagger/api/Bootstrap.java
