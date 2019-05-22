@@ -10,8 +10,6 @@ info:
     name: Proyectos de Investigacion
     url: 'http://spilab.es/'
     email: dgarciajyz@alumnos.unex.es
-servers:
-  - url: None
 paths:
   /user:
     post:
