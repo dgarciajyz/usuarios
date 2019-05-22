@@ -1,0 +1,124 @@
+openapi: 3.0.1
+info:
+  title: Proyectos de Investigacion
+  description: >-
+    Esta API provee los servicios necesarios para gestionar proyectos de
+    investigacion.
+  version: '1.0'
+  termsOfService: 'http://spilab.es/'
+  contact:
+    name: Proyectos de Investigacion
+    url: 'http://spilab.es/'
+    email: dgarciajyz@alumnos.unex.es
+servers:
+  - url: None
+paths:
+  /user:
+    post:
+      tags:
+        - Usuario
+      summary: Registra un nuevo usuario
+      description: Creacion de nuevos usuarios.
+      operationId: registroUsuarios
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Usuario'
+      responses:
+        '201':
+          $ref: '#/components/responses/201'
+        '404':
+          $ref: '#/components/responses/404'
+        '405':
+          $ref: '#/components/responses/405'
+  /user/login:
+    get:
+      tags:
+        - Usuario
+      summary: Devuelve
+      description: Creacion de nuevos usuarios.
+      operationId: inicioSesionUsuarios
+      parameters:
+        - name: username
+          in: query
+          description: Nomber de usuario
+          required: true
+          schema:
+            type: string
+        - name: password
+          in: query
+          description: Password del usuario
+          required: true
+          schema:
+            type: string
+      responses:
+        '201':
+          $ref: '#/components/responses/201'
+        '404':
+          $ref: '#/components/responses/404'
+        '405':
+          $ref: '#/components/responses/405'
+  /user/logout:
+    get:
+      tags:
+        - Usuario
+      summary: Cierre de sesion
+      description: Cierra la sesion abierta por el usuario actual
+      operationId: logoutUsuario
+      responses:
+        '201':
+          $ref: '#/components/responses/201'
+        '404':
+          $ref: '#/components/responses/404'
+        '405':
+          $ref: '#/components/responses/405'
+components:
+  schemas:
+    Usuario:
+      type: object
+      properties:
+        idUsuario:
+          type: integer
+          format: int64
+          example: 1
+        username:
+          type: string
+          example: Administrador
+        password:
+          type: string
+          example: Administrador
+  responses:
+    '200':
+      description: Successful operation
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Usuario'
+    '201':
+      description: Created
+      content:
+        text/plain:
+          schema:
+            title: Created
+            type: string
+            example: Created
+    '404':
+      description: Not found response
+      content:
+        text/plain:
+          schema:
+            title: Endpoint not found
+            type: string
+            example: Not found
+    '405':
+      description: Invalid input
+      content:
+        text/plain:
+          schema:
+            title: Invalid input
+            type: string
+            example: The format is not valid
